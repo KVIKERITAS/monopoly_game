@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+    padding: 20px;
+    background: #262626;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.upgradesContainer {
+    background: #4f4f4f;
+    height: 150px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.upgrade,
+.inventoryItem {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #282828;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+    background: #3b3b3b;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.upgrade:hover {
+    background: #858585;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.upgrade img,
+.inventoryItem img{
+    width: 50px;
+    height: 50px;
+}
+
+.upgrade p,
+.inventoryItem p{
+    text-align: center;
+    font-weight: bold;
+    color: #ffd900;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    height: 700px;
+}
+
+.inventoryContainer {
+    flex: 1;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    background: #1c1c1c;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.goldContainer {
+    flex: 1;
+    border: 1px solid black;
+}
+
+.inventory {
+    display: flex;
+    gap: 20px;
+}
+
+.sellGoldBtn {
+    padding: 20px;
+    background: #969653;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.sellGoldBtn:hover {
+    background: #ffff85;
+}
+
+.inventoryItem {
+    cursor: auto;
+}
+
+.goldPrice img {
+    height: 100px;
+    width: 100px;
+}
+
+.goldPrice {
+    display: flex;
+    align-items: center;
+    background: rgba(128, 128, 128, 0.2);
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #ffd900;
+}
+
+.goldPrice span {
+    color: #00ff04;
+    font-weight: bold;
+}
+
+.goldContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.moneyContainer {
+    display: flex;
+    align-items: center;
+}
+
+.moneyContainer img{
+    height: 100px;
+    width: 100px;
+}
+
+.moneyContainer p {
+    font-size: 50px;
+    color: green;
+    font-weight: bold;
+}
+
+.progress {
+    height: 50px;
+    width: 100%;
+    background: red;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.bar {
+    height: 100%;
+    width: 100%;
+    background: green;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.bar p {
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+}
+
+.digBtn {
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 100px;
+    background: #3a723a;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.digBtn:hover {
+    background: #93ff93;
 }
