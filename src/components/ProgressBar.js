@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ProgressBar = () => {
+const ProgressBar = ({energyLevel}) => {
     return (
         <div className="progress">
-            <div className="bar">
+            <div className="bar" style={{width: `${energyLevel}%`}}>
                 <p>ENERGY LEVEL</p>
             </div>
         </div>

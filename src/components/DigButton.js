@@ -1,8 +1,8 @@
 import React from 'react';
 
-const DigButton = () => {
+const DigButton = ({digGold}) => {
     return (
-        <button className="digBtn">DIG</button>
+        <button className="digBtn" onClick={digGold}>DIG</button>
     );
 };
 
