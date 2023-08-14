@@ -30,14 +30,14 @@ function App() {
     const [inventorySpace, setInventorySpace] = useState(3)
     const [money, setMoney] = useState(100)
     const [goldPrice, setGoldPrice] = useState(13)
-    const [chance, setChance] = useState(0)
+    const [chance, setChance] = useState(1)
 
     function digGold() {
         const randomEnergy = Math.floor((Math.random() * 10) + 1)
 
         if (inventoryItems.length < inventorySpace && energyLevel >= randomEnergy) {
             setEnergyLevel(energyLevel - randomEnergy)
-            setInventoryItems([...inventoryItems, Number((Math.random() + chance).toFixed(2))])
+            setInventoryItems([...inventoryItems, Number((Math.random() * chance).toFixed(2))])
         }
     }
 
