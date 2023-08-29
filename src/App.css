@@ -18,6 +18,10 @@ body {
     gap: 50px;
 }
 
+h1 {
+
+}
+
 .choicesContainer {
     background: #4f4f4f;
     display: flex;
@@ -39,6 +43,11 @@ body {
     background: #d0d0d0;
 }
 
+.choice img {
+    height: 150px;
+    width: 150px;
+}
+
 .startGameBtn {
     padding: 20px;
     cursor: pointer;
@@ -52,6 +61,12 @@ body {
 
 .startGameBtn:hover {
     background: #3d7cfc;
+}
+
+.errorMessage {
+    background: indianred;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .gameBoardContainer {
@@ -104,8 +119,8 @@ body {
 .cardContent img {
     border-radius: 50%;
     background: #c0c0c0;
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     border: 1px solid #525252;
 }
 
@@ -120,10 +135,29 @@ body {
     color: #252525;
     justify-content: center;
     border-top: 5px solid black;
+    pointer-events: none;
 }
 
 .buyBtn:hover {
     background: #4f4f4f;
+}
+
+.available {
+    background: #23ce23;
+    pointer-events: auto;
+}
+
+.available:hover {
+    background: #21a921
+}
+
+.notAvailable {
+    background: #a92121
+}
+
+.owned {
+    background: #3d7cfc;
+    pointer-events: none;
 }
 
 .playerMoney {
@@ -207,5 +241,5 @@ body {
 }
 
 .diceBtn:hover {
-
+    background: #135fa2;
 }

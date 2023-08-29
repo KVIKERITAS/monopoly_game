@@ -105,6 +105,7 @@ const gameCards = [
 const GameBoardPage = () => {
 
     const boughtCards = useSelector(state => state.player.boughtCards)
+    const playerMoney = useSelector(state => state.player.playerMoney)
 
     return (
         <div className="gameBoardContainer">
@@ -120,7 +121,7 @@ const GameBoardPage = () => {
             <div className="boughtCardsContainer">
                <div className="playerMoney">
                    <img src="https://cdn-icons-png.flaticon.com/512/9400/9400233.png" alt=""/>
-                   <h2>Balance: <span>300$</span></h2>
+                   <h2>Balance: <span>{playerMoney}$</span></h2>
                </div>
 
                 {boughtCards.map(card =>
